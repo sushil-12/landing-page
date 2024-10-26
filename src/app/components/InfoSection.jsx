@@ -2,7 +2,7 @@ import React from 'react';
 
 const InfoSection = () => {
   return (
-    <div className=" flex flex-col md:flex-row items-center justify-around">
+    <div className=" flex flex-col md:flex-row items-center justify-around w-full">
       {/* Left Section - Balkan Map */}
       <div className="">
         <div className="w-[500px] h-[500px] bg-white flex items-center justify-center">

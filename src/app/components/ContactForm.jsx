@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactForm = () => {
     return (
-        <div className="flex items-center justify-center h-screen bg-[#b49567] relative">
+        <div className="flex items-center justify-center h-screen relative w-full">
             {/* Background Icon */}
             <img
                 src="/assets/telegram-icon.svg"

@@ -34,7 +34,7 @@ const cardData = [
 
 const StandardCard = () => {
     return (
-        <div className="h-screen">
+        <div className="w-full">
             <div className="text-center mx-auto max-w-screen-md mb-10">
                 <h1 className="text-[38px] font-semibold poppins-semibold title-font mb-2 text-white">
                     Our Shared Standards

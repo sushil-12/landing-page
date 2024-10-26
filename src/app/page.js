@@ -60,7 +60,7 @@ function Home() {
 
     const container = containerRef.current;
     container.addEventListener("wheel", handleScroll, { passive: false });
-    
+
     // Clean up event listener
     return () => container.removeEventListener("wheel", handleScroll);
   }, []);
@@ -71,8 +71,8 @@ function Home() {
         <title>Home</title>
       </Head>
       <div className="sections">
-        <section id="section1" className="section text-gray-700 body-font bg-primary">
-          <div className="mx-auto flex px-36 md:flex-row flex-col items-center padding-upper">
+        <section id="section1" className="section text-gray-700 body-font bg-primary min-h-screen flex items-center">
+          <div className="mx-auto flex px-36 md:flex-row flex-col items-center justify-center w-full">
             <div className="lg:flex-grow max-w-6xl">
               <h1 className="text-64 mb-4 font-semibold max-w-xl poppins-semibold text-white">
                 From the Roots of
@@ -95,15 +95,16 @@ function Home() {
             </div>
           </div>
         </section>
-        <section id="section2" className="section text-gray-700 px-36 body-font bg-secondary py-[40px]">
+        <section id="section2" className="section text-gray-700 px-36 body-font bg-secondary min-h-screen flex items-center">
           <StandardCard />
         </section>
-        <section id="section3" className="section text-gray-700 bg-primary py-[119px] px-36">
+        <section id="section3" className="section text-gray-700 bg-primary min-h-screen flex items-center">
           <InfoSection />
         </section>
-        <section id="section4" className="section text-gray-700 body-font bg-secondary">
+        <section id="section4" className="section text-gray-700 body-font bg-secondary min-h-screen flex items-center">
           <ContactForm />
         </section>
+
       </div>
     </main>
   );
