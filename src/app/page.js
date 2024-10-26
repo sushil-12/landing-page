@@ -5,6 +5,7 @@ import InfoSection from "./components/InfoSection";
 import StandardCard from "./components/StandardCard";
 import anime from "animejs";
 import Head from "next/head";
+import CookieBanner from "./components/CookieBanner";
 
 function Home() {
   const containerRef = useRef(null);
@@ -104,7 +105,7 @@ function Home() {
         <section id="section4" className="section text-gray-700 body-font bg-secondary min-h-screen flex items-center">
           <ContactForm />
         </section>
-
+        <CookieBanner />
       </div>
     </main>
   );
