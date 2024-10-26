@@ -12,8 +12,22 @@
   --light-secondary: #d8c69f;
 }
 
+.sections-container {
+  height: 100vh;
+  overflow: hidden;
+  scroll-snap-type: y mandatory;
+}
+.sections {
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+}
+.section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+}
 .padding-upper {
-  padding-top: 180px;
+  padding-top: 120px;
   padding-bottom: 120px;
 }
 
