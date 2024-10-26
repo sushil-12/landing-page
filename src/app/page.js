@@ -6,6 +6,8 @@ import StandardCard from "./components/StandardCard";
 import anime from "animejs";
 import Head from "next/head";
 import CookieBanner from "./components/CookieBanner";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 function Home() {
   const containerRef = useRef(null);
@@ -13,6 +15,13 @@ function Home() {
   const isScrolling = useRef(false); // Flag to prevent multiple scrolls
 
   useEffect(() => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1000, // Animation duration
+      easing: "ease-out", // Easing effect
+      once: true, // Only animate once per element
+    });
+
     const sections = document.querySelectorAll(".section");
 
     function scrollToSection(index) {
@@ -24,7 +33,7 @@ function Home() {
 
     function appear(index) {
       anime({
-        targets: `.section:nth-child(${index}) h1`,
+        targets: `.section:nth-child(${index})`,
         opacity: [0, 1],
         duration: anime.random(300, 600),
         easing: "easeInOutQuad",
@@ -37,6 +46,20 @@ function Home() {
         opacity: [1, 0],
         duration: anime.random(200, 400),
         easing: "easeInOutQuad",
+      });
+    }
+
+    function handleParallax() {
+      sections.forEach((section, index) => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const offsetTop = section.offsetTop;
+        
+        if (scrollTop >= offsetTop && scrollTop < offsetTop + section.offsetHeight) {
+          const distance = scrollTop - offsetTop;
+
+          // Apply 3D transformations
+          section.style.transform = `translate3d(0, ${distance * 0.2}px, 0) rotateY(${distance * 0.02}deg) scale(${1 - distance * 0.0002})`;
+        }
       });
     }
 
@@ -61,9 +84,13 @@ function Home() {
 
     const container = containerRef.current;
     container.addEventListener("wheel", handleScroll, { passive: false });
+    window.addEventListener("scroll", handleParallax); // Attach parallax effect on scroll
 
-    // Clean up event listener
-    return () => container.removeEventListener("wheel", handleScroll);
+    // Clean up event listeners
+    return () => {
+      container.removeEventListener("wheel", handleScroll);
+      window.removeEventListener("scroll", handleParallax);
+    };
   }, []);
 
   return (
@@ -72,7 +99,11 @@ function Home() {
         <title>Home</title>
       </Head>
       <div className="sections">
-        <section id="section1" className="section text-gray-700 body-font bg-primary min-h-screen flex items-center">
+        <section
+          id="section1"
+          className="section text-gray-700 body-font bg-primary min-h-screen flex items-center "
+          data-aos="fade-down"
+        >
           <div className="mx-auto flex px-36 md:flex-row flex-col items-center justify-center w-full">
             <div className="lg:flex-grow max-w-6xl">
               <h1 className="text-64 mb-4 font-semibold max-w-xl poppins-semibold text-white">
@@ -96,13 +127,25 @@ function Home() {
             </div>
           </div>
         </section>
-        <section id="section2" className="section text-gray-700 px-36 body-font bg-secondary min-h-screen flex items-center">
+        <section
+          id="section2"
+          className="section text-gray-700 px-36 body-font bg-secondary min-h-screen flex items-center"
+          data-aos="fade-up"
+        >
           <StandardCard />
         </section>
-        <section id="section3" className="section text-gray-700 bg-primary min-h-screen flex items-center">
+        <section
+          id="section3"
+          className="section text-gray-700 bg-primary min-h-screen flex items-center"
+          data-aos="fade-up"
+        >
           <InfoSection />
         </section>
-        <section id="section4" className="section text-gray-700 body-font bg-secondary min-h-screen flex items-center">
+        <section
+          id="section4"
+          className="section text-gray-700 body-font bg-secondary min-h-screen flex items-center"
+          data-aos="fade-up"
+        >
           <ContactForm />
         </section>
         <CookieBanner />
