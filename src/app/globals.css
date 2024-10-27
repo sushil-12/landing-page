@@ -10,6 +10,8 @@
   --secondary: #B39A72;
   --danger: #C3655E;
   --light-secondary: #d8c69f;
+  --lighter-secondary: #ECDFC8;
+  
 }
 
 .sections-container {
@@ -25,6 +27,22 @@
 .section {
   min-height: 100vh;
   scroll-snap-align: start;
+}
+
+.tele-mobile {
+  position: absolute; 
+  top: 45%;         
+  left: 50%;         
+  transform: translate(-50%, -50%); 
+  opacity: 0.8;  
+}
+
+.tele-desktop {
+  position: absolute;
+  top: 48% !important;        
+  left: 30%  !important;         
+  transform: translate(-50%, -50%)  !important; 
+  opacity: 1 !important;
 }
 
 .padding-upper {

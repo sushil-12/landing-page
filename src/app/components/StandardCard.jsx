@@ -34,9 +34,9 @@ const cardData = [
 
 const StandardCard = () => {
     return (
-        <div className="w-full">
+        <div className="w-full py-20 md:p-0 lg:pp-0">
             <div className="text-center mx-auto max-w-screen-md mb-10">
-                <h1 className="text-[38px] font-semibold poppins-semibold title-font mb-2 text-white">
+                <h1 className="text-[28px] md:text-responsive-38 lg:text-responsive-38 font-semibold poppins-semibold title-font mb-2 text-white">
                     Our Shared Standards
                 </h1>
                 <p className="text-white text-center poppins-regular text-[18px] ">Discover the core principles that unite this community. Our shared vision fosters a welcoming space, driven by family values and collaborative growth.</p>
@@ -46,9 +46,9 @@ const StandardCard = () => {
                 {cardData.map((card, index) => (
                     <div
                         key={index}
-                        className="flex items-center space-x-4 p-4"
+                        className="flex flex-col md:flex-row lg:flex-row text-center md:text-left lg:text-left items-center space-x-4 p-4"
                     >
-                        <div className="py-3 bg-white rounded-full flex justify-center items-center px-5">
+                        <div className="py-3 bg-white rounded-full flex justify-center items-center px-5 min-w-[110px] max-w-[110px] min-h-[110px] max-h-[110px] ">
                             {/* Icon for the card */}
                             <img
                                 src={card.icon}
@@ -57,10 +57,10 @@ const StandardCard = () => {
                             />
                         </div>
                         <div>
-                            <h3 className="text-[38px] font-semibold poppins-semibold max-w-[400px] text-white">
+                            <h3 className="text-2xl md:text-responsive-38 mt-5 md:mt-0 lg:mt-0 lg:text-responsive-38 font-semibold poppins-semibold lg:max-w-[400px] text-white">
                                 {card.title}
                             </h3>
-                            <p className="  text-white poppins-regular text-[14px]">{card.description}</p>
+                            <p className=" mt-3 text-white poppins-regular text-[14px]">{card.description}</p>
                         </div>
                     </div>
                 ))}
