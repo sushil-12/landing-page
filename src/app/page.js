@@ -98,7 +98,7 @@ function Home() {
       <Head>
         <title>Home</title>
       </Head>
-      <div className="sections">
+      <div className="sections bg-secondary">
         <section
           id="section1"
           className="section text-gray-700 body-font bg-primary min-h-screen flex items-center "
