@@ -27,8 +27,11 @@ module.exports = {
         'poppins': ['Poppins'],
       },
       fontSize: {
+        
+        'responsive-18': 'clamp(0.875rem, 1.5vw + 0.5rem, 1.125rem)', // Minimum 1.5rem, scales with screen, maxes at 28px
         'responsive-28': 'clamp(1.5rem, 2vw + 1rem, 28px)', // Minimum 1.5rem, scales with screen, maxes at 28px
         'responsive-38': 'clamp(1rem, 2vw + 0.4rem, 2.375rem)', // Minimum 1.5rem, scales with screen, maxes at 38px (2.375rem)
+        'responsive-40': 'clamp(1.5rem, 3vw + 1rem, 2.5rem)', // Minimum 1.5rem, scales with screen, maxes at 38px (2.375rem)
         'responsive-64': 'clamp(2rem, 3vw + 0.6rem, 4rem)', // Minimum 2rem (32px), fluid scaling, maximum 4rem (64px)
       },
     },

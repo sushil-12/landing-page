@@ -24,12 +24,9 @@ const CookieBanner = () => {
             <div className="w-full flex justify-around items-center p-4 shadow-xl bg-primary ">
                 <p className="text-white text-[1rem] poppins-regular leading-6">
                     We use cookies to ensure you get the best experience on our website. By using our site, you agree to the &nbsp;
-                    <a href="#" className="underline text-lightersecondary">use of policy</a>.
+                    <a href="/privacy-policy" className="underline text-lightersecondary">use of policy</a>.
                 </p>
-                <button 
-                    onClick={handleAccept} 
-                    className="bg-danger text-white font-semibold py-2 px-4 rounded-md "
-                >
+                <button onClick={handleAccept} className="bg-danger text-white font-semibold py-2 px-4 rounded-md "  >
                     OKAY, THANKS!
                 </button>
             </div>

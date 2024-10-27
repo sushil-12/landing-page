@@ -165,7 +165,24 @@
 .custom-button {
   @apply w-[281px] left-[130px] top-[588px] bg-[#C3655E] rounded-[55px] poppins-semibold text-2xl text-white py-6;
 }
+/* For Webkit browsers (Chrome, Safari, Edge) */
+.policy_content::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
 
+.policy_content::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+.policy_content::-webkit-scrollbar-thumb
+{
+	background-color: var(--danger);
+	border: 2px solid var(--danger);
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
