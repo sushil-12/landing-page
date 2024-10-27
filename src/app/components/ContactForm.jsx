@@ -32,7 +32,7 @@ const ContactForm = () => {
                     </p>
 
                     {/* Button */}
-                    <button className="custom-button mt-14 min-w-[282px]">
+                    <button className="custom-button mt-3 min-w-[282px]">
                         GET IN TOUCH
                     </button>
                 </div>

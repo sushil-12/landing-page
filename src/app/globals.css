@@ -14,6 +14,21 @@
   
 }
 
+.sections-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: hidden;
+}
+.pp-scrollable{
+  overflow: auto;
+}
+
+.section {
+  scroll-snap-align: start;
+  transition: transform 0.8s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .tele-mobile {
   position: absolute; 
   top: 45%;         
@@ -25,7 +40,7 @@
 .tele-desktop {
   position: absolute;
   top: 48% !important;        
-  left: 30%  !important;         
+  left: 15%  !important;         
   transform: translate(-50%, -50%)  !important; 
   opacity: 1 !important;
 }
@@ -150,6 +165,25 @@
 .custom-button {
   @apply w-[281px] left-[130px] top-[588px] bg-[#C3655E] rounded-[55px] poppins-semibold text-2xl text-white py-6;
 }
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: var(--danger);
+	border: 2px solid var(--danger);
+}
+
 /* For Webkit browsers (Chrome, Safari, Edge) */
 .policy_content::-webkit-scrollbar-track
 {

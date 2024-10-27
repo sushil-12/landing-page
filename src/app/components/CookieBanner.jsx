@@ -26,7 +26,7 @@ const CookieBanner = () => {
                     We use cookies to ensure you get the best experience on our website. By using our site, you agree to the &nbsp;
                     <a href="/privacy-policy" className="underline text-lightersecondary">use of policy</a>.
                 </p>
-                <button onClick={handleAccept} className="bg-danger text-white text-[20px] font-semibold py-2 px-6 rounded-[55px] "  >
+                <button onClick={handleAccept} className="bg-danger text-white text-sm md:text-[16px] lg:text-[20px] font-semibold py-2 px-6 rounded-[55px] "  >
                     Okay, Thanks
                 </button>
             </div>

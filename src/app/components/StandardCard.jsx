@@ -35,11 +35,11 @@ const cardData = [
 const StandardCard = () => {
     return (
         <div className="w-full py-20 md:p-0 lg:pp-0">
-            <div className="text-center mx-auto max-w-screen-md mb-10">
+            <div className="text-center mx-auto max-w-4xl-md mb-10">
                 <h1 className="text-[28px] md:text-responsive-38 lg:text-responsive-38 font-semibold poppins-semibold title-font mb-2 text-white">
                     Our Shared Standards
                 </h1>
-                <p className="text-white text-center poppins-regular text-[18px] ">Discover the core principles that unite this community. Our shared vision fosters a welcoming space, driven by family values and collaborative growth.</p>
+                <p className="text-white text-center poppins-regular text-[20px] ">Discover the core principles that unite this community. Our shared vision fosters a welcoming space, driven by family values and collaborative growth.</p>
             </div>
 
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-center">
@@ -60,7 +60,7 @@ const StandardCard = () => {
                             <h3 className="text-2xl md:text-responsive-38 mt-5 md:mt-0 lg:mt-0 lg:text-responsive-38 font-semibold poppins-semibold lg:max-w-[400px] text-white">
                                 {card.title}
                             </h3>
-                            <p className=" mt-3 text-white poppins-regular text-[14px]">{card.description}</p>
+                            <p className=" mt-3 text-white poppins-regular text-[16px]">{card.description}</p>
                         </div>
                     </div>
                 ))}
