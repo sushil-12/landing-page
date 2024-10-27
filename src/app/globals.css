@@ -14,21 +14,6 @@
   
 }
 
-.sections-container {
-  height: 100vh;
-  overflow: hidden;
-  scroll-snap-type: y mandatory;
-}
-.sections {
-  display: flex;
-  flex-direction: column;
-  scroll-snap-align: start;
-}
-.section {
-  min-height: 100vh;
-  scroll-snap-align: start;
-}
-
 .tele-mobile {
   position: absolute; 
   top: 45%;         

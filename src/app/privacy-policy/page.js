@@ -3,11 +3,8 @@ import React from 'react';
 export default function PrivacyPolicy() {
     return (
         <div className="bg-primary min-h-screen flex justify-center p-8 relative">
-            <img
-                src="/assets/logo.svg" // Replace with your logo path
-                alt="Logo"
-                className="absolute top-4 left-4 w-24 h-24"
-            />
+            
+            <a href="/"><img src="/assets/logo.svg" alt="Logo"className="absolute top-4 left-4 w-24 h-24"  /></a>
 
             <div className="container w-full bg-primary text-white p-8 py-24 max-w-6xl">
                 <h1 className="text-4xl font-semibold text-responsive-64 mb-12 poppins-bold">Our Privacy Policy</h1>

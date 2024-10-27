@@ -1,84 +1,12 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import ContactForm from "./components/ContactForm";
 import InfoSection from "./components/InfoSection";
 import StandardCard from "./components/StandardCard";
-import { motion } from "framer-motion";
 import Head from "next/head";
-import CookieBanner from "./components/CookieBanner";
 
 function Home() {
   const containerRef = useRef(null);
-  const currentSectionIndex = useRef(0);
-  const isScrolling = useRef(false); // Flag to prevent multiple scrolls
-  const startY = useRef(null); // Initialize startY as a ref
-  const sections = useRef([]); // Store the sections
-
-  const sectionsVariants = {
-    hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -100 },
-  };
-
-  useEffect(() => {
-    sections.current = containerRef.current.querySelectorAll(".section");
-
-    const scrollToSection = (index) => {
-      if (index < 0 || index >= sections.current.length) return;
-      currentSectionIndex.current = index;
-      sections.current[index].scrollIntoView({ behavior: "smooth" });
-    };
-
-    const handleScroll = (event) => {
-      event.preventDefault();
-      if (isScrolling.current) return; // Prevent further scrolls until animation completes
-
-      isScrolling.current = true; // Set the flag
-      const nextIndex =
-        event.deltaY > 0
-          ? Math.min(currentSectionIndex.current + 1, sections.current.length - 1)
-          : Math.max(currentSectionIndex.current - 1, 0);
-
-      scrollToSection(nextIndex);
-
-      setTimeout(() => {
-        isScrolling.current = false; // Reset the flag after a timeout
-      }, 800); // Adjust timeout duration to match the animation duration
-    };
-
-    const handleTouchStart = (event) => {
-      startY.current = event.touches[0].clientY; // Store the start position
-    };
-
-    const handleTouchMove = (event) => {
-      if (startY.current === null) return; // Do nothing if startY is not set
-      const touchY = event.touches[0].clientY;
-
-      if (startY.current - touchY > 50) {
-        // Swipe up
-        const nextIndex = Math.min(currentSectionIndex.current + 1, sections.current.length - 1);
-        scrollToSection(nextIndex);
-      } else if (touchY - startY.current > 50) {
-        // Swipe down
-        const prevIndex = Math.max(currentSectionIndex.current - 1, 0);
-        scrollToSection(prevIndex);
-      }
-
-      startY.current = null; // Reset startY after handling the touch
-    };
-
-    const container = containerRef.current;
-    container.addEventListener("wheel", handleScroll, { passive: false });
-    container.addEventListener("touchstart", handleTouchStart, { passive: true });
-    container.addEventListener("touchmove", handleTouchMove, { passive: false });
-
-    // Clean up event listeners
-    return () => {
-      container.removeEventListener("wheel", handleScroll);
-      container.removeEventListener("touchstart", handleTouchStart);
-      container.removeEventListener("touchmove", handleTouchMove);
-    };
-  }, []);
 
   return (
     <main ref={containerRef} className="sections-container">
@@ -86,13 +14,9 @@ function Home() {
         <title>Home</title>
       </Head>
       <div className="sections bg-secondary">
-        <motion.section
+        <section
           id="section1"
           className="section text-gray-700 body-font bg-primary min-h-screen flex items-center"
-          variants={sectionsVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
         >
           <div className="mx-auto flex px-4 md:px-16 lg:px-36 md:flex-row flex-col items-center justify-center w-full">
             <div className="lg:flex-grow max-w-6xl text-center md:text-left lg:text-left">
@@ -113,42 +37,30 @@ function Home() {
               <img className="object-cover object-center rounded" alt="hero" src="/assets/balkan-org.svg" />
             </div>
           </div>
-        </motion.section>
-        
-        <motion.section
+        </section>
+
+        <section
           id="section2"
           className="section text-gray-700 px-4 md:px-16 lg:px-36 body-font bg-secondary min-h-screen flex items-center"
-          variants={sectionsVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
         >
           <StandardCard />
-        </motion.section>
+        </section>
 
-       <motion.section
+        <section
           id="section3"
           className="section text-gray-700 px-4 md:px-16 lg:px-36 bg-primary min-h-screen py-20 md:flex lg:flex items-center"
-          variants={sectionsVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
         >
           <InfoSection />
-        </motion.section>
+        </section>
 
-        <motion.section
+        <section
           id="section4"
-          className="section text-gray-700 px-4 md:px-16 lg:px-36 body-font bg-secondary min-h-screen flex items-center"
-          variants={sectionsVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
+          className="section text-gray-700 px-4 md:px-16 lg:px-36 body-font bg-secondary min-h-screen flex flex-col items-center"
         >
           <ContactForm />
-        </motion.section> 
+        </section>
 
-        <CookieBanner />
+
       </div>
     </main>
   );
