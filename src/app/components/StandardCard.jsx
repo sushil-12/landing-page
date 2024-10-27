@@ -34,7 +34,7 @@ const cardData = [
 
 const StandardCard = () => {
     return (
-        <div className="w-full py-20 md:p-0 lg:pp-0">
+        <div className="w-full  md:p-0 lg:p-0">
             <div className="text-center mx-auto max-w-4xl-md mb-10">
                 <h1 className="text-[28px] md:text-responsive-38 lg:text-responsive-38 font-semibold poppins-semibold title-font mb-2 text-white">
                     Our Shared Standards

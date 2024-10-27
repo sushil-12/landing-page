@@ -34,13 +34,13 @@ function Home() {
     <>
       <main id="pagepiling">
         <div className="sections bg-secondary">
-          <section
+          <div
             id="section1"
             className="section pp-scrollable text-gray-700 body-font min-h-screen flex items-center bg-primary"
           >
-            <div className="mx-auto flex px-4 md:px-16 lg:px-36 md:flex-row flex-col items-center justify-center w-full">
+            <div className="mx-auto flex px-4 md:px-16 lg:px-36 md:flex-row flex-col items-center justify-center w-full ">
               <div className="lg:flex-grow max-w-6xl text-center md:text-left lg:text-left">
-                <h1 className="md:text-responsive-64 lg:text-responsive-64 text-responsive-38 mb-4 font-semibold max-w-xl poppins-semibold text-white text-center md:text-left lg:text-left">
+                <h1 className="text-[38px] md:text-responsive-64 lg:text-responsive-64  mb-4 font-semibold max-w-xl poppins-semibold text-white text-center md:text-left lg:text-left">
                   From the Roots of
                   <br className="" />
                   the Balkans, We
@@ -57,28 +57,28 @@ function Home() {
                 <img className="object-cover object-center rounded" alt="hero" src="/assets/balkan-org.svg" />
               </div>
             </div>
-          </section>
+          </div>
 
-          <section
+          <div
             id="section2"
-            className="section pp-scrollable text-gray-700 px-4 md:px-16 lg:px-36 body-font bg-secondary min-h-screen flex items-center"
+            className="section pp-scrollable text-gray-700 px-4 md:px-16 lg:px-36 body-font bg-secondary min-h-screen flex items-center "
           >
             <StandardCard />
-          </section>
+          </div>
 
-          <section
+          <div
             id="section3"
-            className="section pp-scrollable text-gray-700 px-4 md:px-16 lg:px-36 bg-primary min-h-screen py-20 md:flex lg:flex items-center"
+            className="section pp-scrollable text-gray-700 px-4 md:px-16 lg:px-36 bg-primary min-h-screen  md:flex lg:flex items-center"
           >
             <InfoSection />
-          </section>
+          </div>
 
-          <section
+          <div
             id="section4"
             className="section text-gray-700 px-4 md:px-16 lg:px-36 body-font bg-secondary min-h-screen flex flex-col items-center"
           >
             <ContactForm />
-          </section>
+          </div>
 
 
         </div>
