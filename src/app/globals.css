@@ -161,6 +161,7 @@
 {
 	width: 6px;
 	background-color: #F5F5F5;
+  border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb
@@ -170,22 +171,21 @@
 }
 
 /* For Webkit browsers (Chrome, Safari, Edge) */
-.policy_content::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
-	background-color: #F5F5F5;
+.policy_content::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+  border-radius: 10px; /* Ensures the track is rounded */
 }
 
-.policy_content::-webkit-scrollbar
-{
-	width: 6px;
-	background-color: #F5F5F5;
+.policy_content::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
 }
 
-.policy_content::-webkit-scrollbar-thumb
-{
-	background-color: var(--danger);
-	border: 2px solid var(--danger);
+.policy_content::-webkit-scrollbar-thumb {
+  background-color: var(--danger);
+  border: 2px solid var(--danger);
+  border-radius: 10px; /* Rounds the scrollbar thumb */
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -195,7 +195,7 @@
 }
 
 .custom-button-other {
-  @apply w-[281px] left-[130px] top-[588px] bg-[#C3655E] rounded-[55px] poppins-semibold text-2xl text-white pt-6;
+  @apply w-[281px] left-[130px] top-[588px] bg-[#C3655E] rounded-[55px] poppins-semibold text-2xl text-white pt-4;
 }
 
 body {

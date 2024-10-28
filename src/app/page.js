@@ -43,7 +43,7 @@ function Home() {
                   <br />
                   Rise Together.
                 </h1>
-                <img className="object-cover object-center rounded block md:hidden lg:hidden w-96 items-center" alt="hero" src="/assets/balkan-org.svg" />
+                <img className="object-cover object-center rounded block md:hidden lg:hidden w-96 items-center justify-self-center" alt="hero" src="/assets/balkan-org.svg" />
                 <p className="mb-8 leading-relaxed text-white max-w-xl poppins-regular text-[18px] text-center md:text-left lg:text-left">
                   Unite with the Balkans' strongest network. Empowering progress, innovation, and shared tradition. Be part of a community that drives growth and fosters collaboration across the region.
                 </p>
@@ -71,7 +71,7 @@ function Home() {
 
           <div
             id="section4"
-            className="section text-gray-700  body-font bg-secondary min-h-screen flex flex-col items-start lg:items-center mb-4 py-20 lg:py-0"
+            className="section text-gray-700  body-font bg-secondary min-h-screen flex flex-col items-start md:items-center lg:items-center mb-4  lg:py-0"
           >
             <ContactForm />
           </div>
