@@ -1,6 +1,5 @@
 "use client";
 import { useEffect } from "react";
-import Head from "next/head";
 import ContactForm from "./components/ContactForm";
 import InfoSection from "./components/InfoSection";
 import StandardCard from "./components/StandardCard";
@@ -34,7 +33,7 @@ function Home() {
     <>
       <main id="pagepiling">
         <div className="sections bg-secondary">
-          <div id="section1" className="section pp-scrollable text-gray-700 body-font min-h-screen flex items-start lg:items-center bg-primary py-20 lg:py-0">
+          <div id="section1" className="section pp-scrollable text-gray-700 body-font min-h-screen flex items-start md:items-center lg:items-center bg-primary py-20 lg:py-0">
             <div className="mx-auto flex px-4 md:px-16 lg:px-36 md:flex-row flex-col items-start lg:items-center justify-center w-full ">
               <div className="lg:flex-grow max-w-6xl text-center md:text-left lg:text-left">
                 <h1 className="text-[38px] md:text-responsive-64 lg:text-responsive-64  mb-4 font-semibold max-w-xl poppins-semibold text-white text-center md:text-left lg:text-left">
@@ -58,26 +57,24 @@ function Home() {
 
           <div
             id="section2"
-            className="section pp-scrollable text-gray-700 px-4 md:px-16 lg:px-36 body-font bg-secondary min-h-screen flex items-start lg:items-center py-20 lg:py-0 "
+            className="section pp-scrollable text-gray-700 px-4 md:px-16 lg:px-36 body-font bg-secondary min-h-screen flex items-start  py-20 lg:py-0 "
           >
             <StandardCard />
           </div>
 
           <div
             id="section3"
-            className="section pp-scrollable text-gray-700 px-4 md:px-16 lg:px-36 bg-primary min-h-screen  md:flex lg:flex items-start lg:items-center py-20 lg:py-0"
+            className="section pp-scrollable text-gray-700 px-4 md:px-4 lg:px-36 bg-primary min-h-screen  md:flex lg:flex items-start lg:items-center  py-20 lg:py-0"
           >
             <InfoSection />
           </div>
 
           <div
             id="section4"
-            className="section text-gray-700 px-4 md:px-16 lg:px-36 body-font bg-secondary min-h-screen flex flex-col items-start lg:items-center mb-4 py-20 lg:py-0"
+            className="section text-gray-700  body-font bg-secondary min-h-screen flex flex-col items-start lg:items-center mb-4 py-20 lg:py-0"
           >
             <ContactForm />
           </div>
-
-
         </div>
       </main>
     </>

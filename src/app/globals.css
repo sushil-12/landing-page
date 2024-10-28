@@ -194,6 +194,10 @@
   }
 }
 
+.custom-button-other {
+  @apply w-[281px] left-[130px] top-[588px] bg-[#C3655E] rounded-[55px] poppins-semibold text-2xl text-white pt-6;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

@@ -4,22 +4,10 @@ import CookieBanner from './CookieBanner';
 const ContactForm = () => {
     return (
         <>
-            <div className="flex items-center justify-center h-screen relative w-full flex-col">
-                {/* Background Icon */}
-                <img 
-                    src="/assets/telegram-icon.svg" 
-                    alt="telegram" 
-                    className="absolute w-[512px] h-[512px] tele-mobile md:hidden lg:hidden" 
-                />
-                <img 
-                    src="/assets/telegram-icon.svg" 
-                    alt="telegram" 
-                    className="absolute w-[512px] h-[512px] tele-desktop hidden md:block lg:block" 
-                />
-
+            <div className="flex  w-full flex-col justify-center place-content-center items-center  ">
                 {/* Content */}
-                <div className="text-center relative z-10 max-w-3xl px-5">
-                    <h2 className="text-white text-responsive-38 font-semibold poppins-semibold mb-4">
+                <div className="text-center  z-10 max-w-4xl px-4 md:px-8 lg:px-36">
+                    <h2 className="text-white text-[48px] font-semibold poppins-semibold mb-4">
                         Be a Part of Our Story
                     </h2>
                     <p className="text-[14px] text-white mb-6 poppins-regular">
@@ -32,15 +20,19 @@ const ContactForm = () => {
                     </p>
 
                     {/* Button */}
-                    <button className="custom-button mt-3 min-w-[282px]">
-                        GET IN TOUCH
-                    </button>
+                    <div className="flex items-center justify-center space-x-2">
+                        <button className="custom-button-other text-center flex flex-col items-center">
+                            <span className="text-2xl flex-grow mb-1">Get in Touch</span>
+                            <span className="w-full h-[1px] bg-secondary mb-1"></span>
+                            <span className="text-[1rem] pb-0">or Chat with Us</span>
+                        </button>
+                    </div>
                 </div>
-                <CookieBanner />
+               
             </div>
-
+            <CookieBanner />
             {/* Cookie Banner should be at the bottom */}
-            
+
         </>
     );
 };

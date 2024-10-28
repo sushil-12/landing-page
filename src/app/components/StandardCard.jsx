@@ -46,7 +46,7 @@ const StandardCard = () => {
                 {cardData.map((card, index) => (
                     <div
                         key={index}
-                        className="flex flex-col md:flex-row lg:flex-row text-center md:text-left lg:text-left items-center space-x-4 p-4"
+                        className="flex flex-col lg:flex-row text-center md:text-left lg:text-left items-center space-x-4 p-4"
                     >
                         <div className="py-3 bg-white rounded-full flex justify-center items-center px-5 min-w-[110px] max-w-[110px] min-h-[110px] max-h-[110px] ">
                             {/* Icon for the card */}
@@ -56,8 +56,8 @@ const StandardCard = () => {
                                 className="min-w-[47px] h-[64px]"
                             />
                         </div>
-                        <div>
-                            <h3 className="text-2xl md:text-responsive-38 mt-5 md:mt-0 lg:mt-0 lg:text-responsive-38 font-semibold poppins-semibold lg:max-w-[400px] text-white">
+                        <div className='text-center lg:text-left'>
+                            <h3 className="text-2xl md:text-responsive-38 mt-5 md:mt-2 lg:mt-0 lg:text-responsive-38 font-semibold poppins-semibold lg:max-w-[400px] text-white">
                                 {card.title}
                             </h3>
                             <p className=" mt-3 text-white poppins-regular text-[16px]">{card.description}</p>
