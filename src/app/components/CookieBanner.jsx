@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link'
 
 const CookieBanner = () => {
     const [isVisible, setIsVisible] = useState(true);
@@ -24,7 +25,7 @@ const CookieBanner = () => {
             <div className="w-full flex justify-around items-center p-4 shadow-xl bg-primary ">
                 <p className="text-white text-[1rem] poppins-regular leading-6">
                     We use cookies to ensure you get the best experience on our website. By using our site, you agree to the &nbsp;
-                    <a href="/privacy-policy" className="underline text-lightersecondary">use of policy</a>.
+                    <Link href="/privacy-policy" className="underline text-lightersecondary">use of policy.</Link>
                 </p>
                 <button onClick={handleAccept} className="bg-danger text-white text-sm md:text-[16px] lg:text-[20px] font-semibold py-2 px-6 rounded-[55px] "  >
                     Okay, Thanks
