@@ -6,6 +6,7 @@ import StandardCard from "./components/StandardCard";
 
 // Import pagePiling CSS only
 import "pagepiling.js/dist/jquery.pagepiling.css";
+import homeJSonLd from "./schema/homeJsonLd";
 
 function Home() {
   useEffect(() => {
@@ -32,6 +33,10 @@ function Home() {
   return (
     <>
       <main id="pagepiling">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJSonLd) }}
+      />
         <div className="sections bg-secondary">
           <div id="section1" className="section pp-scrollable text-gray-700 body-font min-h-screen flex items-start md:items-center lg:items-center bg-primary py-20 lg:py-0">
             <div className="mx-auto flex px-4 md:px-16 lg:px-36 md:flex-row flex-col items-start lg:items-center justify-center w-full ">

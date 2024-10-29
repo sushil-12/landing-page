@@ -4,10 +4,10 @@ import CookieBanner from './CookieBanner';
 const ContactForm = () => {
     return (
         <>
-            <div className="flex  w-full flex-col justify-center place-content-center  ">
+            <div className="flex  w-full flex-col justify-center place-content-center items-center  ">
                 {/* Content */}
                 <div className="text-center  z-10 max-w-4xl px-4 md:px-8 lg:px-36">
-                    <h2 className="text-white text-[48px] font-semibold poppins-semibold mb-4">
+                    <h2 className="text-white text-[38px] lg:text-[48px] font-semibold poppins-semibold mb-4">
                         Be a Part of Our Story
                     </h2>
                     <p className="text-[14px] text-white mb-6 poppins-regular">
