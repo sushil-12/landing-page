@@ -21,8 +21,8 @@ const CookieBanner = () => {
     if (!isVisible) return null;
 
     return (
-        <div className="absolute bottom-0 z-50 flex items-center justify-center  w-screen ">
-            <div className="w-full flex justify-around items-center p-4 shadow-xl bg-primary ">
+        <div className="absolute bottom-0 z-50   items-center justify-center  w-screen ">
+            <div className="w-full flex flex-col gap-4 lg:flex-row text-center md:text-left lg:text-left justify-around items-center p-4 shadow-xl bg-primary ">
                 <p className="text-white text-[1rem] poppins-regular leading-6">
                     We use cookies to ensure you get the best experience on our website. By using our site, you agree to the &nbsp;
                     <Link href="/privacy-policy" className="underline text-lightersecondary">use of policy.</Link>

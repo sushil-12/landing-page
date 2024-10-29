@@ -80,7 +80,7 @@ function Home() {
 
           <div
             id="section2"
-            className="section pp-scrollable text-gray-700 px-4 md:px-16 lg:px-36 body-font bg-secondary min-h-screen flex items-start  py-20 lg:py-0 "
+            className="section pp-scrollable text-gray-700 px-4 md:px-16 lg:px-36 body-font bg-secondary min-h-screen flex items-start  py-20 lg:py-0 xl:items-center "
           >
             <StandardCard />
           </div>
