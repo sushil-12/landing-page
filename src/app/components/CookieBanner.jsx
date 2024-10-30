@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
 
 const CookieBanner = () => {
-    const [isVisible, setIsVisible] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
         // Check if the 'acceptedCookies' cookie is set
@@ -21,12 +21,12 @@ const CookieBanner = () => {
 
     return (
         <div className="fixed bottom-0 z-50 flex items-center justify-center bg-danger w-full ">
-            <div className="w-full flex flex-col lg:flex-row md:flex-row justify-around items-center p-4 shadow-xl ">
-                <p className="text-white text-[1rem] poppins-regular leading-6">
+            <div className="w-full flex flex-col lg:flex-row md:flex-row justify-center lg:justify-around items-center p-4 shadow-xl ">
+                <p className="text-white text-center lg:text-justify text-[1rem] poppins-regular leading-6 mb-4 lg:mb-0 md:mb-0">
                     We use cookies to ensure you get the best experience on our website. By using our site, you agree to the &nbsp;
                     <Link href="/privacy-policy" className="underline text-lightersecondary">use of policy.</Link>
                 </p>
-                <button onClick={handleAccept} className="bg-primary text-white text-sm md:text-[16px] lg:text-[20px] font-semibold  px-6 rounded-[55px] p-4 "  >
+                <button onClick={handleAccept} className="bg-primary text-white text-sm md:text-[16px] lg:text-[20px] font-semibold  px-6 rounded-[55px] p-4"  >
                     Okay, Thanks
                 </button>
             </div>

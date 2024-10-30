@@ -13,21 +13,18 @@ const ContactForm = () => {
                         <span>
                             Whether you're from the Balkans or exploring our region from afar, whether you wish to join, inquire, or collaborate, we are eager to hear from you.
                         </span>
+                        &nbsp;
                         <span className="font-bold">
                             Let's make the Balkans not just a place on the map, but a vibrant community of connected hearts and minds.
                         </span>
                     </p>
 
                     {/* Button */}
-                    <div className="flex items-center justify-center space-x-2">
-                        <button className="custom-button-other text-center flex flex-col items-center">
-                            <span className="text-2xl flex-grow mb-1">Get in Touch</span>
-                            <span className="w-full h-[1px] bg-secondary mb-1"></span>
-                            <span className="text-[1rem] pb-0">or Chat with Us</span>
-                        </button>
-                    </div>
+                    <button className="custom-button  min-w-[282px]">
+                        GET IN TOUCH
+                    </button>
                 </div>
-               
+
             </div>
             {/* Cookie Banner should be at the bottom */}
 
