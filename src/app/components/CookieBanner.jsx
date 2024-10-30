@@ -13,7 +13,6 @@ const CookieBanner = () => {
     }, []);
 
     const handleAccept = () => {
-        // Set the 'acceptedCookies' cookie to expire in 30 days
         document.cookie = "acceptedCookies=true; path=/; max-age=" + 30 * 24 * 60 * 60;
         setIsVisible(false);
     };
