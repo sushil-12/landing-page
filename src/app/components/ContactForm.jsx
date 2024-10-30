@@ -3,7 +3,7 @@ import React from 'react';
 const ContactForm = () => {
     return (
         <>
-            <div className="flex  w-full flex-col justify-center place-content-center items-center">
+            <div className="flex  w-full flex-col justify-center place-content-center items-center overflow-x-hidden">
                 {/* Content */}
                 <div className="text-center  z-10 max-w-4xl px-4 md:px-8 lg:px-36">
                     <h2 className="text-white text-[38px] lg:text-[48px] font-semibold poppins-semibold mb-4">
@@ -13,21 +13,18 @@ const ContactForm = () => {
                         <span>
                             Whether you're from the Balkans or exploring our region from afar, whether you wish to join, inquire, or collaborate, we are eager to hear from you.
                         </span>
+                        &nbsp;
                         <span className="font-bold">
                             Let's make the Balkans not just a place on the map, but a vibrant community of connected hearts and minds.
                         </span>
                     </p>
 
                     {/* Button */}
-                    <div className="flex items-center justify-center space-x-2">
-                        <button className="custom-button-other text-center flex flex-col items-center">
-                            <span className="text-2xl flex-grow mb-1">Get in Touch</span>
-                            <span className="w-full h-[1px] bg-secondary mb-1"></span>
-                            <span className="text-[1rem] pb-0">or Chat with Us</span>
-                        </button>
-                    </div>
+                    <button className="custom-button  min-w-[282px]">
+                        GET IN TOUCH
+                    </button>
                 </div>
-               
+
             </div>
             {/* Cookie Banner should be at the bottom */}
 
