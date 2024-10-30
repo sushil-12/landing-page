@@ -13,6 +13,10 @@
   --lighter-secondary: #ECDFC8;
   
 }
+.home-sections{
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 
 .tele-mobile {
   position: absolute; 
