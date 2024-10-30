@@ -7,6 +7,7 @@ import "pagepiling.js/dist/jquery.pagepiling.css";
 import homeJSonLd from "./schema/homeJsonLd";
 import Script from "next/script";
 import Head from "next/head";
+import CookieBanner from "./components/CookieBanner";
 
 function Home() {
   useEffect(() => {
@@ -97,6 +98,7 @@ function Home() {
           >
             <ContactForm />
           </div>
+          <CookieBanner />
         </div>
       </main>
     </>

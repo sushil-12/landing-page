@@ -1,29 +1,11 @@
-import CookieBanner from './CookieBanner';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const ContactForm = () => {
-    const [isVisible, setIsVisible] = useState(true);
- 
-    useEffect(() => {
-        // Check if the 'acceptedCookies' cookie is set
-        const acceptedCookies = document.cookie.split('; ').find(row => row.startsWith('acceptedCookies='));
-        if (acceptedCookies) {
-            setIsVisible(false);
-        }
-    }, []);
-
-    const handleAccept = () => {
-        // Set the 'acceptedCookies' cookie to expire in 30 days
-        document.cookie = "acceptedCookies=true; path=/; max-age=" + 30 * 24 * 60 * 60;
-        setIsVisible(false);
-    };
-   console.log(isVisible);
-
     return (
-        <div className='h-[100vh] '>
-            <div className={`flex w-full flex-col justify-center place-content-center items-center relative ${isVisible ? 'h-[90vh]': 'h-[100vh]'}`}>
+        <>
+            <div className="flex  w-full flex-col justify-center place-content-center items-center">
                 {/* Content */}
-                <div className="text-center z-10 max-w-4xl px-4 md:px-8 lg:px-36">
+                <div className="text-center  z-10 max-w-4xl px-4 md:px-8 lg:px-36">
                     <h2 className="text-white text-[38px] lg:text-[48px] font-semibold poppins-semibold mb-4">
                         Be a Part of Our Story
                     </h2>
@@ -45,9 +27,11 @@ const ContactForm = () => {
                         </button>
                     </div>
                 </div>
+               
             </div>
-            {isVisible && <div className="h-[10vh] "><CookieBanner handleAccept={handleAccept} /></div>}
-        </div>
+            {/* Cookie Banner should be at the bottom */}
+
+        </>
     );
 };
 
