@@ -71,7 +71,7 @@ function Home() {
 
           <div
             id="section4"
-            className="text-gray-700 px-4 md:px-4 lg:px-36 bg-secondary min-h-screen md:flex lg:flex items-start lg:items-center py-20 lg:py-0">
+            className="text-gray-700 px-4 md:px-4 lg:px-36 bg-secondary min-h-screen place-content-center md:flex lg:flex items-center lg:items-center py-20 lg:py-0">
             <ContactForm />
           </div>
           
