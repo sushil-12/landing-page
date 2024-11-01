@@ -7,8 +7,8 @@ const CookieBanner = () => {
     useEffect(() => {
         // Check if the 'acceptedCookies' cookie is set
         const acceptedCookies = document.cookie.split('; ').find(row => row.startsWith('acceptedCookies='));
-        if (!acceptedCookies) {
-            setIsVisible(true);
+        if (acceptedCookies) {
+            setIsVisible(false);
         }
     }, []);
 
